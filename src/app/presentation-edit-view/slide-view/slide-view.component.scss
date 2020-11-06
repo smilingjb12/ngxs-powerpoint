@@ -1,0 +1,26 @@
+:host {
+  display: block;
+
+  .canvas {
+    display: flex;
+    margin: 2rem;
+    border: 1px solid #eee;
+    height: 80vh;
+    border-radius: 5px;
+
+    .content {
+      display: flex;
+      flex: 1;
+      position: relative;
+
+      .placeholder {
+        font-size: 2rem;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+}

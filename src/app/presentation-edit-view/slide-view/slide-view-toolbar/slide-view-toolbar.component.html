@@ -1,0 +1,25 @@
+<div class="toolbar mt-4" *ngIf="slide">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button class="btn btn-outline-secondary btn-sm" (click)="addTriangle()">
+      <svg class="bi" width="32" height="32" fill="currentColor">
+        <use xlink:href="assets/bootstrap-icons.svg#caret-up" />
+      </svg>
+    </button>
+    <div ngbDropdown class="d-inline-block" #dropdown="ngbDropdown">
+      <button class="btn btn-outline-secondary btn-sm" ngbDropdownToggle>
+        <svg class="bi" width="32" height="32" fill="currentColor">
+          <use xlink:href="assets/bootstrap-icons.svg#type" />
+        </svg>
+      </button>
+      <div ngbDropdownMenu>
+        <form class="text-figure-form">
+          <div class="form-group">
+            <label for="text">Text</label>
+            <input type="text" class="form-control" id="text" #text>
+          </div>
+          <button type="button" class="btn btn-primary" (click)="addText(text.value);">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

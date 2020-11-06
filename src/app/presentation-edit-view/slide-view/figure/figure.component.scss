@@ -1,0 +1,14 @@
+:host {
+  position: absolute;
+  display: block;
+
+  .figure {
+    display: flex;
+    width: 80px;
+    height: 80px;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+}

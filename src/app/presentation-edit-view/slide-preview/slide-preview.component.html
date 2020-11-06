@@ -1,0 +1,6 @@
+<div class="slide" (click)="selectSlide()" [class.selected]="isSelected">
+  <div class="id">{{index + 1}}</div>
+  <div class="remove-btn">
+    <button class="btn btn-outline-danger" (click)="removeSlide()">Remove</button>
+  </div>
+</div>

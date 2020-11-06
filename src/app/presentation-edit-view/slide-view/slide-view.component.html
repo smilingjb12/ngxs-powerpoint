@@ -1,0 +1,11 @@
+<app-slide-view-toolbar></app-slide-view-toolbar>
+<div class="d-flex canvas" #canvas>
+  <div *ngIf="slide" class="content">
+    <app-figure [ngStyle]="{'left.px': figure.position.x, 'top.px': figure.position.y}" [figure]="figure"
+      *ngFor="let figure of figures | async" ngDraggable [bounds]="canvas" [inBounds]="true"
+      (stopped)="onDragStopped($event, figure)"></app-figure>
+  </div>
+  <div *ngIf="!slide" class="content">
+    <div class="placeholder text-muted">Select a slide</div>
+  </div>
+</div>
